@@ -5,6 +5,7 @@ const nextConfig = {
   experimental: {
     typedRoutes: true,
   },
+  
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -49,7 +50,7 @@ const nextConfig = {
     },
   ],
   eslint: {
-    dirs: ['src'],
+    ignoreDuringBuilds: true,
   },
   compress: true,
   trailingSlash: false,

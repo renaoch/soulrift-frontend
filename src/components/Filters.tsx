@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import {
@@ -33,7 +34,8 @@ export function Filters() {
     ['category', 'min', 'max'].forEach(param => {
       url.searchParams.delete(param);
     });
-    router.replace(url.pathname + url.search);
+router.replace(url.pathname + url.search as unknown as any);
+
   };
 
   const applyFilters = () => {
@@ -53,7 +55,8 @@ export function Filters() {
       url.searchParams.set('max', priceRange[1].toString());
     }
 
-    router.replace(url.pathname + url.search);
+router.replace(url.pathname + url.search as unknown as any);
+
   };
 
   const activeFiltersCount = selectedCategories.length + (priceRange[0] > 0 || priceRange[1] < 300 ? 1 : 0);

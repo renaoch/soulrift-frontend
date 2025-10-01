@@ -19,7 +19,7 @@ export default function ProductsPage() {
     showFilters,
     viewMode,
     fetchProducts,
-    toggleFilters,
+
   } = useProductStore();
 
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
@@ -168,7 +168,7 @@ export default function ProductsPage() {
                         key={product.id} 
                         product={product} 
                         viewMode="grid"
-                        className="group cursor-pointer"
+           
                       />
                     ))}
                   </div>

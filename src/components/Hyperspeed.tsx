@@ -24,7 +24,7 @@ interface Colors {
   sticks: number;
 }
 
-interface HyperspeedOptions {
+export interface HyperspeedOptions {
   onSpeedUp?: (ev: MouseEvent | TouchEvent) => void;
   onSlowDown?: (ev: MouseEvent | TouchEvent) => void;
   distortion?: string | Distortion;
@@ -54,11 +54,11 @@ interface HyperspeedOptions {
   isHyper?: boolean;
 }
 
-interface HyperspeedProps {
+export interface HyperspeedProps {
   effectOptions?: Partial<HyperspeedOptions>;
 }
 
-const defaultOptions: HyperspeedOptions = {
+export const defaultOptions: HyperspeedOptions = {
   onSpeedUp: () => {},
   onSlowDown: () => {},
   distortion: 'turbulentDistortion',

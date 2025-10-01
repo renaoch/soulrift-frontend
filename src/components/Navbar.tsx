@@ -44,7 +44,7 @@ export function NavbarD() {
               {navItems.map((item, idx) => (
                 <Link
                   key={idx}
-                  href={item.link}
+                  href={{pathname:`${item.link}`}}
                   className="text-gray-600 hover:text-black transition-colors font-light"
                 >
                   {item.name}
@@ -92,7 +92,7 @@ export function NavbarD() {
             {navItems.map((item, idx) => (
               <Link
                 key={`mobile-link-${idx}`}
-                href={item.link}
+                href={{pathname:`${item.link}`}}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-gray-600 hover:text-black transition-colors font-light py-2"
               >
